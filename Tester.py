@@ -103,7 +103,7 @@ data_dict_cvrp_large = {
     "X-n1001-k43": 72355,
 }
 
-
+##### Please replace these paths with your paths!!!!#####
 path_1000_20_dict = {0:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/CVRP/or_tools_20s_cvrp1000_uniform.pkl",
 1:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/OVRP/or_tools_20s_ovrp1000_uniform.pkl",
 2:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/VRPB/or_tools_20s_vrpb1000_uniform.pkl",
@@ -160,22 +160,22 @@ path_2000_dict = {
 }
 
 path_3000_dict = {
-0:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_0.pkl",
-1:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_1.pkl",
-2:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_2.pkl",
-3:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_3.pkl",
-4:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_4.pkl",
-5:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_5.pkl",
-6:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_6.pkl",
-7:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_7.pkl",
-8:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_8.pkl",
-9:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_9.pkl",
-10: "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_10.pkl",
-11: "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_11.pkl",
-12: "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_12.pkl",
-13: "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_13.pkl",
-14: "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_14.pkl",
-15: "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/3000_128_15.pkl"
+0:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/CVRP/or_tools_200s_cvrp3000_uniform.pkl",
+1:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/OVRP/or_tools_200s_ovrp3000_uniform.pkl",
+2:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/VRPB/or_tools_200s_vrpb3000_uniform.pkl",
+3:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/VRPL/or_tools_200s_vrpl3000_uniform.pkl",
+4:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/VRPTW/or_tools_200s_vrptw3000_uniform.pkl",
+5:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/OVRPTW/or_tools_200s_ovrptw3000_uniform.pkl",
+6:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/OVRPB/or_tools_200s_ovrpb3000_uniform.pkl",
+7:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/OVRPL/or_tools_200s_ovrpl3000_uniform.pkl",
+8:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/VRPBL/or_tools_200s_vrpbl3000_uniform.pkl",
+9:  "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/VRPBTW/or_tools_200s_vrpbtw3000_uniform.pkl",
+10: "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/VRPLTW/or_tools_200s_vrpltw3000_uniform.pkl",
+11: "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/OVRPBL/or_tools_200s_ovrpbl3000_uniform.pkl",
+12: "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/OVRPBTW/or_tools_200s_ovrpbtw3000_uniform.pkl",
+13: "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/OVRPLTW/or_tools_200s_ovrpltw3000_uniform.pkl",
+14: "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/VRPBLTW/or_tools_200s_vrpbltw3000_uniform.pkl",
+15: "/home/suyu/suyu/data_distill/test/Routing-MVMoE/data/OVRPBLTW/or_tools_200s_ovrpbltw3000_uniform.pkl"
 }
 
 path_4000_dict = {
@@ -233,11 +233,11 @@ class Tester:
         self.time_estimator = TimeEstimator()
 
     def run(self):
-        gap = []
+        #gap = []
         for env_id, env_class in enumerate(self.envs):
             start_time = time.time()
-            kkt = 0
-            co = 0
+            #kkt = 0
+            #co = 0
             if self.tester_params['test_set_path'] is None or self.tester_params['test_set_path'].endswith(".pkl"):
                 compute_gap = not (self.tester_params['test_set_path'] is not None and self.tester_params['test_set_opt_sol_path'] is None)
                 if self.tester_params['fine_tune_epochs'] > 0:
@@ -253,19 +253,19 @@ class Tester:
                             no_aug_score, aug_score = self._solve_cvrplib(self.model, path, env_class)
                             #gap.append((aug_score-data_dict_cvrp[path[62:-4]])/data_dict_cvrp[path[62:-4]])
                             #print((aug_score-data_dict_cvrp[path[62:-4]])/data_dict_cvrp[path[62:-4]])
-                            gap.append((aug_score-data_dict_cvrp_large[path[64:-8]])/data_dict_cvrp_large[path[64:-8]])
-                            print((aug_score-data_dict_cvrp_large[path[64:-8]])/data_dict_cvrp_large[path[64:-8]])
+                            #gap.append((aug_score-data_dict_cvrp_large[path[64:-8]])/data_dict_cvrp_large[path[64:-8]])
+                            #print((aug_score-data_dict_cvrp_large[path[64:-8]])/data_dict_cvrp_large[path[64:-8]])
 
                     elif env_class is envs.VRPTWEnv:
                         no_aug_score, aug_score = self._solve_cvrptwlib(self.model, path, env_class)
-                        gap.append((aug_score-data_dict_vrptw[path[69:-4]])/data_dict_vrptw[path[69:-4]])
-                        print((aug_score-data_dict_vrptw[path[69:-4]])/data_dict_vrptw[path[69:-4]])
+                        #gap.append((aug_score-data_dict_vrptw[path[69:-4]])/data_dict_vrptw[path[69:-4]])
+                        #print((aug_score-data_dict_vrptw[path[69:-4]])/data_dict_vrptw[path[69:-4]])
                     else:
                         raise NotImplementedError
                     
                 print("GAP:{}".format(sum(gap)/len(gap)))
             
-            print(kkt)
+            #print(kkt)
 
             print(">> Evaluation finished within {:.2f}s\n".format(time.time() - start_time))
 
