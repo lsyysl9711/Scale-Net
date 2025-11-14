@@ -17,6 +17,11 @@ This is the code repo of the implementation for the AAAI 2026 paper:
    
        python train.py --problem=Train_ALL --model_type=MOE
 
+Download test datastes from:
+
+https://drive.google.com/drive/folders/12RbmA8Uf0sjOrg_ZUI1qXlo9lIzxJdWw?usp=sharing
+
+and put it under directory "/data".
 
 ## Acknowledgments
 We want to express our sincere thanks to the following works:
