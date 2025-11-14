@@ -32,7 +32,7 @@ if __name__ == "__main__":
     parser.add_argument('--problem', type=str, default="ALL", choices=["ALL", "CVRP", "OVRP", "VRPB", "VRPL", "VRPTW", "OVRPTW",
                                                                        "OVRPB", "OVRPL", "VRPBL", "VRPBTW", "VRPLTW",
                                                                        "OVRPBL", "OVRPBTW", "OVRPLTW", "VRPBLTW", "OVRPBLTW"])
-    parser.add_argument('--problem_size', type=int, default=4000)
+    parser.add_argument('--problem_size', type=int, default=50)
     parser.add_argument('--pomo_size', type=int, default=2, help="the number of start node, should <= problem size")
 
     # model_params
