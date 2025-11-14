@@ -140,15 +140,13 @@ def get_env(problem):
 
 
 def get_model(model_type):
-    from models import SINGLEModel, MTLModel_ori, MOEModel, MOEModel_Light, MTLModel_ET
+    from models import SINGLEModel, MOEModel, MTLModel_ET
     if model_type == "MTL":
         return MTLModel_ori
     elif model_type == "MTL_ET":
         return MTLModel_ET
     elif model_type == "MOE":
         return MOEModel
-    elif model_type == "MOE_LIGHT":
-        return MOEModel_Light
     elif model_type == "SINGLE":
         return SINGLEModel
     else:
