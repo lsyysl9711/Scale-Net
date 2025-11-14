@@ -26,3 +26,18 @@ We want to express our sincere thanks to the following works:
 [MVMoE: Multi-Task Vehicle Routing Solver with Mixture-of-Experts](https://github.com/RoyalSkye/Routing-MVMoE)
 
 [Rethinking Light Decoder-based Solvers for Vehicle Routing Problems](https://github.com/ziweileonhuang/reld-nco)
+
+## Citations
+
+  <div style="position: relative">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('bibtex-cite').innerText)" style="position: absolute; top: 4px; right: 4px;"></button>
+    <pre id="bibtex-cite"><code>
+@inproceedings{liu2026scale,
+  title     = {Scale-Net: A Hierarchical U-Net Framework for Cross-Scale Generalization in Multi-Task Vehicle Routing Problems},
+  author    = {Suyu Liu and Zhiguang Cao and Nan Yin and Yew-Soon Ong},
+  booktitle = {AAAI},
+  year      = {2026}
+}
+    </code></pre>
+  </div>
+
